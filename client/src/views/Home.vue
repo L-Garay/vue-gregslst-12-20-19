@@ -1,6 +1,77 @@
 <template>
   <div class="home container-fluid">
-    <h2>THis is the home page</h2>
+    <div class="row">
+      <div class="col-12">
+        <h1>Welcome to the Home Page, enjoy the gifs...</h1>
+      </div>
+    </div>
+    <div class="row gifs">
+      <div class="card-columns">
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/11EjiLDatd0syA/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/l3nSWRgDAparB8ad2/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/UVMyrH35t5qsmm0Isx/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/G2nSsMBCWGYpO/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/U2nN0ridM4lXy/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/8RuJ23GPbruW4/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/13UZisxBxkjPwI/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/4MwP0n2iPbkcM/giphy.gif"
+            class="card-img-top"
+            alt="https://media.giphy.com/media/aDS8SjVtS3Mwo/giphy.gif"
+          />
+        </div>
+        <div class="card">
+          <img
+            src="https://media.giphy.com/media/ahZZZZFGLGhvq/giphy.gif"
+            class="card-img-top"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,3 +128,4 @@ h1 img {
   height: 1em;
 }
 </style>
+

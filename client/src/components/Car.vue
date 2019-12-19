@@ -1,7 +1,7 @@
 <template>
   <div class="car" :class="{ greyscale: carData.sold }">
     <router-link :to="{ name: 'carDetails', params: { id: carData.id } }">
-      <img :src="carData.imgUrl" alt="" />
+      <img :src="carData.imgUrl" alt />
       <p>{{ carMakeUpperCase }} | {{ carData.model }}</p>
     </router-link>
     <button @click="sold">SOLD</button>
@@ -27,7 +27,8 @@ export default {
 
 <style scoped>
 img {
-  max-width: 100%;
+  width: 85%;
+  height: 30vh;
 }
 .greyscale {
   filter: grayscale(1);

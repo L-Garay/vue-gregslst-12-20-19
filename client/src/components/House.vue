@@ -23,7 +23,8 @@ export default {
 
 <style scoped>
 img {
-  max-width: 100%;
+  width: 85%;
+  height: 30vh;
 }
 .greyscale {
   filter: grayscale(1);
