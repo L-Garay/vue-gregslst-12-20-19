@@ -1,61 +1,6 @@
 <template>
   <div class="home container-fluid">
-    <header class="row">
-      <div class="col">
-        <h1>C<img alt="Vue logo" src="../assets/logo.png" />rs</h1>
-      </div>
-    </header>
-    <main class="row search">
-      <div class="col-12">
-        <form @submit.prevent="createCar">
-          <input
-            required
-            type="text"
-            v-model="newCar.make"
-            placeholder="Make"
-          />
-          <input
-            required
-            type="text"
-            v-model="newCar.model"
-            placeholder="model"
-          />
-          <input
-            required
-            type="number"
-            v-model="newCar.price"
-            placeholder="price"
-          />
-          <input
-            required
-            type="number"
-            v-model="newCar.year"
-            placeholder="year"
-          />
-          <input
-            required
-            type="text"
-            v-model="newCar.imgUrl"
-            placeholder="imgUrl"
-          />
-          <input
-            required
-            type="text"
-            v-model="newCar.description"
-            placeholder="description"
-          />
-          <button class="btn btn-success" type="submit">Add Car</button>
-        </form>
-      </div>
-      <div class="col-12">
-        <div class="row cars">
-          <div class="col-4" v-for="car in cars" :key="car.id">
-            <!-- Props are data passed from parent to child with :propName="DATA" -->
-            <car-component :carData="car" />
-          </div>
-        </div>
-      </div>
-    </main>
+    <h2>THis is the home page</h2>
   </div>
 </template>
 

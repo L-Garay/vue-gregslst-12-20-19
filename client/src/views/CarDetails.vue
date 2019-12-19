@@ -2,12 +2,20 @@
   <div class="car-details container-fluid">
     <header class="row">
       <div class="col">
-        <router-link :to="{ name: 'home' }">
-          <h1>C<img alt="Vue logo" src="../assets/logo.png" />rs</h1>
-        </router-link>
+        <h1>Welcome to the Detailed Car Page</h1>
       </div>
     </header>
-    {{ car }}
+    <main class="row">
+      <div class="col-6">
+        <img :src="car.imgUrl" alt="car img" />
+      </div>
+      <div class="col-6">
+        <h3>{{car.make}} {{car.model}}</h3>
+        <p>{{car.year}}</p>
+        <p>Price: ${{car.price}}</p>
+        <p>{{car.description}}</p>
+      </div>
+    </main>
   </div>
 </template>
 
