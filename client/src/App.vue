@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-link v-if="$route.name != 'home'" :to="{ name: 'home' }">Home</router-link>
+    <router-link v-if="$route.name != 'home'" :to="{ name: 'home' }">
+      <h3>Home</h3>
+    </router-link>
     <router-link v-if="$route.name != 'cars'" :to="{ name: 'cars' }">Cars</router-link>
     <router-link v-if="$route.name != 'houses'" :to="{ name: 'houses' }">Houses</router-link>
     <router-link v-if="$route.name != 'jobs'" :to="{ name: 'jobs' }">Jobs</router-link>

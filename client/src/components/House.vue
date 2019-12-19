@@ -1,6 +1,6 @@
 <template>
   <div class="house" :class="{ greyscale: houseData.sold }">
-    <router-link :to="{ name: 'houseDetails', params: { id: houseData.id } }">
+    <router-link :to="{ name: 'HouseDetails', params: { id: houseData.id } }">
       <img :src="houseData.imgUrl" alt />
       <p>{{ houseData.year }} | {{ houseData.price }}</p>
     </router-link>

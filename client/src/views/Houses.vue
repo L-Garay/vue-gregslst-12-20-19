@@ -8,13 +8,45 @@
     <main class="row search">
       <div class="col-12">
         <form @submit.prevent="createHouse">
+          Year Built:
           <input required type="number" v-model="newHouse.year" placeholder="Year Built" />
+          Style:
           <input required type="text" v-model="newHouse.style" placeholder="Style" />
-          <input required type="number" v-model="newHouse.price" placeholder="price" />
-          <input required type="number" v-model="newHouse.bedrooms" placeholder="Bedrooms" />
-          <input required type="text" v-model="newHouse.imgUrl" placeholder="imgUrl" />
-          <input required type="number" v-model="newHouse.bathrooms" placeholder="bathrooms" />
-          <input required type="number" v-model="newHouse.garages" placeholder="garges" />
+          Price:
+          <input
+            required
+            type="number"
+            v-model="newHouse.price"
+            placeholder="price"
+          />
+          Bedrooms:
+          <input
+            required
+            type="number"
+            v-model="newHouse.bedrooms"
+            placeholder="Bedrooms"
+          />
+          Image of House (url):
+          <input
+            required
+            type="text"
+            v-model="newHouse.imgUrl"
+            placeholder="imgUrl"
+          />
+          Number of Bathrooms:
+          <input
+            required
+            type="number"
+            v-model="newHouse.bathrooms"
+            placeholder="bathrooms"
+          />
+          Number of Garage spots:
+          <input
+            required
+            type="number"
+            v-model="newHouse.garages"
+            placeholder="garges"
+          />
           <button class="btn btn-success" type="submit">Add House</button>
         </form>
       </div>

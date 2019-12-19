@@ -11,11 +11,17 @@
     <main class="row search">
       <div class="col-12">
         <form @submit.prevent="createCar">
+          Make of Car:
           <input required type="text" v-model="newCar.make" placeholder="Make" />
+          Model of Car:
           <input required type="text" v-model="newCar.model" placeholder="model" />
+          Price:
           <input required type="number" v-model="newCar.price" placeholder="price" />
+          Year Built:
           <input required type="number" v-model="newCar.year" placeholder="year" />
+          Image of Car (url):
           <input required type="text" v-model="newCar.imgUrl" placeholder="imgUrl" />
+          Description of Car:
           <input required type="text" v-model="newCar.description" placeholder="description" />
           <button class="btn btn-success" type="submit">Add Car</button>
         </form>

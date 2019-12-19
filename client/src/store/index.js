@@ -30,6 +30,12 @@ export default new Vuex.Store({
     // Houses Functions
     setAllHouses(state, houseData) {
       state.houses = houseData;
+    },
+    addHouse(state, house) {
+      state.houses.push(house);
+    },
+    setActiveHouse(state, house) {
+      state.activeHouse = house;
     }
   },
   actions: {
@@ -55,11 +61,14 @@ export default new Vuex.Store({
     async getHouses({ commit, dispatch }) {
       let res = await _api.get("houses");
       commit("setAllHouses", res.data);
+    },
+    async createHouse({ commit, dispatch }, house) {
+      let res = await _api.post("houses", house);
+      commit("addHouse", res.data);
+    },
+    async getHouseById({ commit, dispatch }, id) {
+      let res = await _api.get("houses/" + id);
+      commit("setActiveHouse", res.data);
     }
-
-    // async createHouse({commit, dispatch}, house) {
-    //   let res = await _api.post("houses", house);
-    //   commit("")
-    // }
   }
 });

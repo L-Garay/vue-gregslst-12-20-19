@@ -6,10 +6,10 @@
       </div>
     </header>
     <main class="row">
-      <div class="col-6">
-        <img :src="car.imgUrl" alt="car img" />
+      <div class="col-8">
+        <img class="car-img" :src="car.imgUrl" alt="car img" />
       </div>
-      <div class="col-6">
+      <div class="col-4 car-info">
         <h3>{{car.make}} {{car.model}}</h3>
         <p>{{car.year}}</p>
         <p>Price: ${{car.price}}</p>
@@ -33,4 +33,14 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.car-img {
+  height: 60vh;
+  width: 65vw;
+}
+.car-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
