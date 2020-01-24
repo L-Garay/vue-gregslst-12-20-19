@@ -1,11 +1,23 @@
 <template>
-  <div id="app">
-    <router-link v-if="$route.name != 'home'" :to="{ name: 'home' }">
-      <h3>Home</h3>
-    </router-link>
-    <router-link v-if="$route.name != 'cars'" :to="{ name: 'cars' }">Cars</router-link>
-    <router-link v-if="$route.name != 'houses'" :to="{ name: 'houses' }">Houses</router-link>
-    <router-link v-if="$route.name != 'jobs'" :to="{ name: 'jobs' }">Jobs</router-link>
+  <div id="app" class="container-fluid">
+    <div class="row header">
+      <div class="col-6 d-flex align-items-center">
+        <router-link class="color" :to="{ name: 'home' }">
+          <h3>Home</h3>
+        </router-link>
+      </div>
+      <div class="col-6 d-flex justify-content-end align-items-center">
+        <div class="p-3">
+          <router-link class="color" :to="{ name: 'cars' }">Cars</router-link>
+        </div>
+        <div class="p-3">
+          <router-link class="color" :to="{ name: 'houses' }">Houses</router-link>
+        </div>
+        <div class="p-3">
+          <router-link class="color" :to="{ name: 'Jobs' }">Jobs</router-link>
+        </div>
+      </div>
+    </div>
     <router-view />
   </div>
 </template>
@@ -17,6 +29,15 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.header {
+  background-color: skyblue;
+}
+.color {
+  color: white;
+}
+.color:hover {
+  color: black;
 }
 
 #nav {

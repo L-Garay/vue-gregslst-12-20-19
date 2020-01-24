@@ -2,7 +2,7 @@
   <div class="home container-fluid">
     <header class="row">
       <div class="col">
-        <h1>Houses</h1>
+        <h1>Find Your Forever House</h1>
       </div>
     </header>
     <main class="row search">
@@ -51,7 +51,7 @@
         </form>
       </div>
       <div class="col-12">
-        <div class="row houses">
+        <div class="row houses pt-3">
           <div class="col-4" v-for="house in getHouses" :key="house.id">
             <!-- Props are data passed from parent to child with :propName="DATA" -->
             <house-component :houseData="house" />

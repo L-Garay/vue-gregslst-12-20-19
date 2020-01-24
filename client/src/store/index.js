@@ -36,6 +36,10 @@ export default new Vuex.Store({
     },
     setActiveHouse(state, house) {
       state.activeHouse = house;
+    },
+    //Job Functions
+    setAllJobs(state, jobData) {
+      state.jobs = jobData;
     }
   },
   actions: {
@@ -69,6 +73,11 @@ export default new Vuex.Store({
     async getHouseById({ commit, dispatch }, id) {
       let res = await _api.get("houses/" + id);
       commit("setActiveHouse", res.data);
+    },
+    //Job Functions
+    async getJobs({ commit, dispatch }) {
+      let res = await _api("jobs");
+      commit("setAllJobs", res.data);
     }
   }
 });

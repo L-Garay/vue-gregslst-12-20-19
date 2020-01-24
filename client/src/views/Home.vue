@@ -76,50 +76,15 @@
 </template>
 
 <script>
-import CarComponent from "@/components/Car";
 export default {
   name: "home",
   mounted() {
     //runs when the component is first put (mounted) on the dom
-    this.$store.dispatch("getCars");
   },
-  data() {
-    return {
-      newCar: {
-        make: "",
-        model: "",
-        price: 0,
-        year: 0,
-        imgUrl: "",
-        description: ""
-      }
-    };
-  },
-  methods: {
-    createCar() {
-      let car = { ...this.newCar }; //NOTE makes a copy of the car data object
-      this.$store.dispatch("createCar", car);
-      this.newCar = {
-        make: "",
-        model: "",
-        price: 0,
-        year: 0,
-        imgUrl: "",
-        description: ""
-      };
-    }
-  },
-  computed: {
-    cars() {
-      return this.$store.state.cars;
-    },
-    unsoldCars() {
-      this.cars.filter(c => !car.sold);
-    }
-  },
-  components: {
-    CarComponent
-  }
+  data() {},
+  methods: {},
+  computed: {},
+  components: {}
 };
 </script>
 <style>
